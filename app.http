@@ -1,11 +1,14 @@
-GET http://localhost:3000/todos/?status=TO%20D
+GET http://localhost:3000/todos/?status=TO%20DO
 
 ###
 
 GET http://localhost:3000/todos/?priority=HIGH
+
+
 ###
 
 GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
 
 ###
 
@@ -23,19 +26,20 @@ GET http://localhost:3000/todos/?category=HOME
 GET http://localhost:3000/todos/3
 
 ###|
+GET http://localhost:3000/agenda/?date=2021-02-22
 
-get http://localhost:3000/agenda/?date=2021-02-22
+
 
 ###
-post http://localhost:3000/todos 
+POST http://localhost:3000/todos/
 Content-Type:application/json 
 
 {
  "id": 6,
- "todo": "Finalize event theme",
+ "todo": "Buy event theme",
  "priority": "LOW",
  "status": "TO DO",
- "dueDate": "2021-02-22",
+ "dueDate": "2022-12-24",
  "category": "HOME"
 }
 
@@ -73,8 +77,8 @@ Content-Type : application/json
 PUT http://localhost:3000/todos/4
 Content-Type : application/json
 
-{ "dueDate": "2021-01-12" }
+{ "dueDate": "2021-12-12" }
 
 
 ###
-DELETE http://localhost:3000/todos/4 
+DELETE http://localhost:3000/todos/6 
